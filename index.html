@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUDS</title>
+  <!-- Main Style File  -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <!-- Font Awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Font Google  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Open+Sans&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Start The Header  -->
+  <header>
+    <div class="info col-all">
+      <h1>cruds</h1>
+      <p>Products Mangement System</p>
+    </div>
+
+    <div class="inputs">
+      <input type="text" id="title" placeholder="title" class="col-all" />
+      <div class="col-all">
+        <input type="number" id="price" placeholder="price" />
+        <input type="number" id="taxes" placeholder="taxes" />
+        <input type="number" id="ads" placeholder="ads" />
+        <input type="number" id="discount" placeholder="discount" />
+        <p id="total">Total</p>
+      </div>
+      <input type="number" id="count" placeholder="count" class="col-all" />
+      <input type="text" id="category" placeholder="category" class="col-all" />
+      <button id="create" class="col-all" data-type="create">Create</button>
+      <input type="text" id="search" placeholder="search" class="col-all" />
+      <button id="search-title">Search By Title</button>
+      <button id="search-category">Search By Category</button>
+      <button id="search-delete-all" class="col-all">
+        Delete All (<span id="categories-count">0</span>)
+      </button>
+    </div>
+  </header>
+  <!-- End The Header  -->
+
+  <!-- Start The Table  -->
+  <table class="gategories" data-columns-count="7">
+    <tr>
+      <th>ID</th>
+      <th>Tile</th>
+      <th>Price</th>
+      <th>Taxes</th>
+      <th>Ads</th>
+      <th>Discount</th>
+      <th>Total</th>
+      <th>Category</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+  </table>
+  <!-- End The Table  -->
+  <!-- Main javaScript File  -->
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
