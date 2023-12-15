@@ -1,4 +1,5 @@
 // Start The Global Style
+$main-color: #0c82e1;
 * {
   padding: 0;
   margin: 0;
@@ -10,7 +11,14 @@ body {
   background-color: #2c2b2b;
 }
 
-$main-color: #0c82e1;
+::-webkit-scrollbar{
+  background-color: #2c2b2b;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: $main-color;
+  border-radius: 10px;
+}
 // End The Global Style
 
 // Start The Header
@@ -92,47 +100,52 @@ header {
 }
 // End The Header
 
-// Start The Table
-.gategories {
-  padding: 10px;
-  width: 100%;
+// Start The 
+.table-area{
+  width: 97vw;
+  overflow-x: scroll;
 
-  tr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    th,
-    td {
-      font-size: 15px;
-      color: white;
-      flex: 1;
-      text-align: center;
-      margin-top: 10px;
-      border-bottom: 1px solid #565656;
-      padding-bottom: 15px;
-      min-width: 80px;
-
-      &:not(:last-child, :nth-child(9)){
-        overflow-x: hidden;
-        white-space: nowrap;
+  .gategories {
+    padding: 10px;
+    width: 100%;
+  
+    tr {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      th,
+      td {
+        font-size: 15px;
+        color: white;
+        flex: 1;
+        text-align: center;
+        margin-top: 10px;
+        border-bottom: 1px solid #565656;
+        padding-bottom: 15px;
+        min-width: 80px;
+  
+        &:not(:last-child, :nth-child(9)){
+          overflow-x: hidden;
+          white-space: nowrap;
+        }
       }
+  
+      button{
+        background-color: $main-color;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: -15px;
+        cursor: pointer;
+        transition: .5s;
+  
+        &:hover {
+          background-color: #6fb7f1;
+        }
+  }
     }
-
-    button{
-      background-color: $main-color;
-      color: white;
-      padding: 2px 6px;
-      border-radius: 8px;
-      border: none;
-      margin-bottom: -15px;
-      cursor: pointer;
-      transition: .5s;
-
-      &:hover {
-        background-color: #6fb7f1;
-      }
-}
   }
 }
 // End The Table
